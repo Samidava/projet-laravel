@@ -15,6 +15,10 @@ class CreateProjetsTable extends Migration
     {
         Schema::create('projets', function (Blueprint $table) {
             $table->id();
+            $table->string('name',256);
+            $table->date('date_d');
+            $table->date('data_f');
+            $table->enum('etape',['init','concetion']);
             $table->timestamps();
         });
     }
