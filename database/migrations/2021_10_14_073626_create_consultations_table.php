@@ -15,10 +15,14 @@ class CreateConsultationsTable extends Migration
     {
         Schema::create('consultations', function (Blueprint $table) {
             $table->id();
+            $table->data('data');
+            $table->string('methode', 256);
+            $table->text('decription', 256);
             $table->timestamps();
+
+
         });
     }
-
     /**
      * Reverse the migrations.
      *

@@ -15,10 +15,13 @@ class CreatePeopleTable extends Migration
     {
         Schema::create('people', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('nom', 256);
+            $table->string('prenom', 256);
+            $table->string('e-mail', 256);
         });
     }
-
+    
+    
     /**
      * Reverse the migrations.
      *

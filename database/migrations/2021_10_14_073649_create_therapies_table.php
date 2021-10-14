@@ -15,6 +15,9 @@ class CreateTherapiesTable extends Migration
     {
         Schema::create('therapies', function (Blueprint $table) {
             $table->id();
+            $table->string('sujet,256');
+            $table->decimal('tarif');
+            $table->enum('en cours','termine');
             $table->timestamps();
         });
     }
