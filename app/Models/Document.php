@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Document extends Model
 {
     use HasFactory;
+
+
+    protected $fillable = ['name', 'slug'];
+    protected $hidden = ['created_at', 'updated_at'];
+    public function consultation()
+    {
+    return $this->hasMany(consultation::class);
+    }
+
+
 }
