@@ -9,7 +9,7 @@ class Projet extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'slug'];
+    protected $fillable = ['name', 'date_d','data_f','etape'];
     protected $hidden = ['created_at', 'updated_at'];
     public function documents()
     {

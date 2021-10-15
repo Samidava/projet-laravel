@@ -9,7 +9,7 @@ class Consultation extends Model
 
 {
         use HasFactory;
-        protected $fillable = ['name', 'slug'];
+        protected $fillable = ['methode', 'decription'];
         protected $hidden = ['created_at', 'updated_at'];
         public function therapy()
         {

@@ -18,6 +18,9 @@ class CreateConsultationsTable extends Migration
             $table->string('methode', 256);
             $table->text('decription', 256);
             $table->timestamps();
+
+
+            
             $table->unsignedBigInteger('people_id');
             $table->foreign('people_id')
             ->references('id')

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Therapy extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'slug'];
+    protected $fillable = ['sujet', 'tarif','statut'];
     protected $hidden = ['created_at', 'updated_at'];
     public function consultations()
     {

@@ -23,7 +23,7 @@ class TherapyFactory extends Factory
     {
         return [
             'sujet' => $this->faker->word,
-            'tarif' => $this->faker->date,
+            'tarif' => $this->faker->word,
             'statut' => $this->faker->word,
         ];
     }
