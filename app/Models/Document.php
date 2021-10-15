@@ -10,7 +10,7 @@
         use HasFactory;
 
 
-        protected $fillable = ['name', 'slug'];
+        protected $fillable = ['name', 'data','type','description','chemin','taille'];
         protected $hidden = ['created_at', 'updated_at'];
 
         public function projet()
