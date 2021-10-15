@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Document;
+use App\Models\Link;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class DocumentFactory extends Factory
+class LinkFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Document::class;
+    protected $model = Link::class;
 
     /**
      * Define the model's default state.
@@ -22,12 +22,7 @@ class DocumentFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->word,
-            'date_d' => $this->faker->date,
-            'date_f' => $this->faker->date,
-            'etape' => $this->faker->word,
-            
-              
-            ];
+            //
+        ];
     }
 }

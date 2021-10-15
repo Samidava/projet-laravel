@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTherapiesTable extends Migration
+class CreateProjetsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateTherapiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('therapies', function (Blueprint $table) {
+        Schema::create('projets', function (Blueprint $table) {
             $table->id();
-            $table->string('sujet,256');
-            $table->decimal('tarif');
-            $table->enum('en cours','termine');
             $table->timestamps();
+            $table->string('name',256);
+            $table->date('date_d');
+            $table->date('data_f');
+            $table->enum('etape',['init','concetion']);
         });
     }
 
@@ -29,6 +30,6 @@ class CreateTherapiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('therapies');
+        Schema::dropIfExists('projets');
     }
 }

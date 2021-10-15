@@ -15,14 +15,18 @@ class CreateConsultationsTable extends Migration
     {
         Schema::create('consultations', function (Blueprint $table) {
             $table->id();
-            $table->data('data');
             $table->string('methode', 256);
             $table->text('decription', 256);
             $table->timestamps();
-
-
+            $table->unsignedBigInteger('people_id');
+            $table->foreign('people_id')
+            ->references('id')
+            ->on('people')
+            ->onDelete('restrict')
+            ->onUpdate('restrict');
         });
     }
+
     /**
      * Reverse the migrations.
      *

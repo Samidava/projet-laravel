@@ -22,7 +22,12 @@ class DocumentFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->word,
+            'date' => $this->faker->date,
+            'type' => $this->faker->word,
+            'description' => $this->faker->sentence(),
+            'chemin' => $this->faker->word,
+            'taille' => $this->faker->word, 
         ];
     }
 }
